@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+  <meta charset="utf-8" />
+  <script src="../js/obliczeniaPompa.js"></script>
+  <script src="../js/jsxgraphcore.js"></script>
+  <link rel="stylesheet" href="../css/formularzStyl.css">
+  <link rel="stylesheet" href="../css/jsxgraph.css" />
+ </head>
+  <title>
+	Obliczenia charakterystyk przepływu i mocy pompy wody zasilającej na podstawie danych współrzędnych
+  </title>
+ </head>
+ <body onload="przygotujPustyWykres()">
+  <header>
+   <h1>Obliczenia charakterystyk przepływu i mocy pompy wody zasilającej na podstawie danych współrzędnych</h1>
+   <p />
+   <h2>Podaj dane:</h2>
+   <span>wszystkie pola są wymagane!</span>
+   <span>(średnik jako separator wartości oraz kropka jako przecinek)</span><br />
+  </header>
+  <form class="formularz_danych">
+    <ul>
+	 <li>
+	  <label>Q:</label>
+	  <input type="text" id="Q" size="20" value="25;50;75;100" />
+	 </li>
+	<li>
+	  <label>deltap: </label>
+	  <input type="text" id="deltap" value="22.8;22;20.9;19" />
+	</li>
+	<li>
+	  <label>sprawność silnika: </label>
+	  <input type="text" id="etas" value="0.8;0.8;0.8;0.8" />
+	</li>
+	<li>
+	  <label>sprawność pompy: </label>
+	  <input type="text" id="etap" value="0.45;0.7;0.79;0.8" />
+	</li>
+    <li>
+     <button class="submit" type="submit" onclick="narysujWykres(event)">oblicz i wykreśl</button>
+    </li>	
+   </ul>
+  </form>   
+  <div id='box' class='jxgbox' style='width:800px; height:600px;'></div>
+ </body>
+</html>

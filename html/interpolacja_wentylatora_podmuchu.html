@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+  <meta charset="utf-8" />
+  <script src="../js/jsxgraphcore.js"></script>
+  <script src="../js/interpolacjaWentylatoraPodmuchu.js"></script>
+  <link rel="stylesheet" href="../css/formularzStyl.css">
+  <link rel="stylesheet" href="../css/jsxgraph.css" />
+ </head>
+  <title>
+	Interpolacja charakterystyk przepływu i mocy wentylatora podmuchu na podstawie danych współrzędnych
+  </title>
+ </head>
+ <body onload="przygotujPustyWykres()">
+  <header>
+   <h1>Obliczenia charakterystyk przepływu i mocy wentylatora podmuchu na podstawie danych współrzędnych</h1>
+   <p />
+   <h2>Podaj dane:</h2>
+   <span>wszystkie pola są wymagane!</span><br />
+   <span>(średnik jako separator wartości oraz kropka jako przecinek)</span>
+  </header>
+   <form class="formularz_danych">
+    <ul>
+	 <li>
+	  <label>Q:</label>
+	  <input type="text" id="Q" size="20" value="33.6;44.8;56;67.2;78.4" />
+	 </li>
+	 <li>
+	  <label>deltap: </label>
+	  <input type="text" id="deltap" value="4.792;4.739;4.1;3.25;2.26" />
+	 </li>
+	 <li>
+	  <label>sprawność silnika:</label>
+	  <input type="number" id="etas" step="0.01" value="0.81" required />
+	 </li>
+	 <li>
+	  <label>sprawność wentylatora:</label>
+	  <input type="number" id="etaw" step="0.01" value="0.89" required />
+	 </li>
+	 <li>
+	  <button class="submit" type="submit" onclick="narysujWykres(event)">wykreśl</button>
+	 </li>
+	</ul>
+   </form>
+  <div id='box' class='jxgbox' style='width:800px; height:600px;'></div>
+ </body>
+</html>

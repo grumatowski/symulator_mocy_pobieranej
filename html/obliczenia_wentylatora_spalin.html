@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="pl">
+    <meta charset="UTF-8">
+    <title>
+        Obliczenia charakterystyk wentylatora spalin
+    </title>
+
+    <script src="../js/jsxgraphcore.js"></script>
+    <script src="../js/obliczeniaWentylatoraSpalin.js"></script>
+    <script src="../js/uiWentylatoraSpalin.js"></script>
+
+    <link rel="stylesheet" href="../css/formularzStyl.css">
+    <link rel="stylesheet" href="../css/jsxgraph.css" />
+</head>
+<body onload="przygotujPustyWykres()">
+<header>
+    <h1>Obliczenia charakterystyk wentylatora spalin (ciagu)</h1><p></p>
+    <h2>Podaj dane:</h2>
+    <span>wszystkie pola są wymagane!</span>
+</header>
+    <form class="formularz_danych" style="float: left;">
+        <ul>
+            <li>
+                <label for="z">liczba łopatek: </label>
+                <input id="z" autofocus type="number" value="4" step="1" min="0" max="500" required>
+            </li>
+            <li>
+                <label for="alfa2">kąt wypływającego strumienia: </label>
+                <input id="alfa2" type="number" value="22" step="0.01" min="0" max="360" required>[&#176;]
+            </li>
+            <li>
+                <label for="beta2">wylotowy kąt łopatkowy:</label>
+                <input id="beta2" type="number" value="83.2" step="0.01" min="0" max="360" required>[&#176;]
+            </li>
+            <li>
+                <label for="D2">średnica zewnętrzna wieńca łopatkowego:</label>
+                <input id="D2" type="number" value="2.5" step="0.01" min="0" required>[m]
+            </li>
+            <li>
+                <label for="deltapzn">spręż w punkcie znamionowym:</label>
+                <input id="deltapzn" type="number" value="3.2" min="0" step="0.01" required>[kPa]
+            </li>
+            <li>
+                <label for="etazn">sprawność znamionowa wentylatora:</label>
+                <input id="etazn" type="number" value="0.86" step="0.01" min="0" max="0.99" required>
+            </li>
+            <li>
+                <label for="etas">sprawność silnika:</label>
+                <input id="etas" type="number" value="0.91" step="0.01" min="0" max="0.99" required>
+            </li>
+            <li>
+                <label for="n">prędkość obrotowa silnika:</label>
+                <input id="n" type="number" value="590" step="1" min="0" required>[obr/min]
+            </li>
+            <li>
+                <label for="Qzn">wydajność wentylatora w punkcie znamionowym:</label>
+                <input id="Qzn" type="number" value="100" step="1" min="0" required>[m&#179;/s]
+            </li>
+            <li>
+                <label for="tc">temperatura czynnika:</label>
+                <input id="tc" type="number" value="200" step="1" min="0" required>[&#176;]C
+            </li>
+            <li>
+                <button class="submit" type="submit" onclick="narysujWykres(event)">oblicz i wykreśl</button>
+            </li>
+        </ul>
+    </form>
+    <div id='box' class='jxgbox' style='width:800px; height:600px;'></div>
+</body>
+</html>
