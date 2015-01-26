@@ -1,7 +1,7 @@
 /* plik: uiWentylatoraPodmuchu.js */
 /* autor: Grzegorz RUMATOWSKI */
 
-/* wczytuje dane, przygotowuje plansze dop wykresu oraz krzywą na podstawie obliczeń */
+/* wczytuje dane, przygotowuje plansze do wykresu oraz krzywą na podstawie obliczeń */
 /* korzysta z biblioteki JSXGraph */ 
 
 var globalne = {};

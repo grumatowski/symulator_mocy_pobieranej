@@ -53,14 +53,18 @@ function narysujWykresInterpolacji(board, x, y)
     return  board.create('functiongraph', [f, x[0] - 1, x[x.length - 1] + 1], {strokeWidth:2});
 }
 
-function narysujWykres(event)
+function narysujWykres()
 {
-    event.preventDefault();
+    var formularz = document.getElementById('formularz');
 
-    var dane = przygotujDane();
+	if (formularz.checkValidity())
+	{
+	var dane = przygotujDane();
     var daneDoWykresu = przygotujPunkty(dane);
     narysujWykresInterpolacji(globalne.board, daneDoWykresu.Q, daneDoWykresu.deltap);
 	narysujWykresInterpolacji(globalne.board, daneDoWykresu.Q, daneDoWykresu.mp);
+	}
+
 }
 
 function przygotujPustyWykres()

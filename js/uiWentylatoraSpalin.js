@@ -1,7 +1,7 @@
-/* plik: uiWentylatoraPodmuchu.js */
+/* plik: uiWentylatoraSpalin.js */
 /* autor: Grzegorz RUMATOWSKI */
 
-/* wczytuje dane, przygotowuje plansze dop wykresu oraz krzywą na podstawie obliczeń */
+/* wczytuje dane, przygotowuje plansze do wykresu oraz krzywą na podstawie obliczeń */
 /* korzysta z biblioteki JSXGraph */ 
 
 var globalne = {};
@@ -36,15 +36,17 @@ function narysujWykresInterpolacji(board, x, y)
     return  board.create('functiongraph', [f, x[0] , x[x.length - 1] ], {strokeWidth:2});
 }
 
-function narysujWykres(event)
+function narysujWykres()
 {
-    event.preventDefault();
-
-    var dane = przygotujDane();
-    var daneDoWykresu = obliczPunkty(dane);
-    narysujWykresInterpolacji(globalne.board, daneDoWykresu.Q, daneDoWykresu.deltap); // charakterystyka przepływu
-	narysujWykresInterpolacji(globalne.board, daneDoWykresu.Q, daneDoWykresu.mp); // charakterystyka mocy pobieranej
+    var formularz = document.getElementById('formularz');
 	
+	if (formularz.checkValidity())
+	{
+		var dane = przygotujDane();
+		var daneDoWykresu = obliczPunkty(dane);
+		narysujWykresInterpolacji(globalne.board, daneDoWykresu.Q, daneDoWykresu.deltap); // charakterystyka przepływu
+		narysujWykresInterpolacji(globalne.board, daneDoWykresu.Q, daneDoWykresu.mp); // charakterystyka mocy pobieranej
+	}
 }
 
 function przygotujPustyWykres()

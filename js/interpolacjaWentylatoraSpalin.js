@@ -55,12 +55,15 @@ function narysujWykresInterpolacji(board, x, y)
 
 function narysujWykres(event)
 {
-    event.preventDefault();
-
-    var dane = przygotujDane();
-    var daneDoWykresu = przygotujPunkty(dane);
-    narysujWykresInterpolacji(globalne.board, daneDoWykresu.Q, daneDoWykresu.deltap);
-	narysujWykresInterpolacji(globalne.board, daneDoWykresu.Q, daneDoWykresu.mp);
+    var formularz = document.getElementById('formularz');
+	
+	if (formularz.checkValidity())
+	{
+		var dane = przygotujDane();
+		var daneDoWykresu = przygotujPunkty(dane);
+		narysujWykresInterpolacji(globalne.board, daneDoWykresu.Q, daneDoWykresu.deltap);
+		narysujWykresInterpolacji(globalne.board, daneDoWykresu.Q, daneDoWykresu.mp);
+	}
 }
 
 function przygotujPustyWykres()
