@@ -1,7 +1,11 @@
 #Symulator mocy pobieranej przez urządzenia potrzeb własnych elektrowni cieplnej
 
-`index.html` - strona startowa
+[index.html](https://github.com/grumatowski/symulator_mocy_pobieranej/blob/master/index.html) - strona startowa
 
-`css` - folder arkuszy stylów
+[css](https://github.com/grumatowski/symulator_mocy_pobieranej/tree/master/css) - folder arkuszy stylów
 
-`js` - folder z programami w JavaScript
+[html](https://github.com/grumatowski/symulator_mocy_pobieranej/tree/master/html) - folder z plikami HTML
+
+[js](https://github.com/grumatowski/symulator_mocy_pobieranej/tree/master/js) - folder z programami w JavaScript
+
+[Treść pracy magisterskiej](https://github.com/grumatowski/symulator_mocy_pobieranej/raw/master/symulator_mocy_pobieranej.pdf)
