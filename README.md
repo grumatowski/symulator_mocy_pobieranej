@@ -1,4 +1,4 @@
-#Symulator mocy pobieranej przez urządzenia potrzeb własnych elektrowni cieplnej
+# Symulator mocy pobieranej przez urządzenia potrzeb własnych elektrowni cieplnej
 
 [index.html](https://github.com/grumatowski/symulator_mocy_pobieranej/blob/master/index.html) - strona startowa
 
